@@ -1,12 +1,9 @@
-class SortearNumero
-    def self.sortear
-			v = []
+require "securerandom"
 
-			# File.open(File.expand_path('../../numeros.txt',__FILE__), 'r') do |file|
-			# 		while line = file.gets
-			# 			v.push(line.to_i)
-			# 		end
-    	# 	end
-			v.sample
-		end
+class SortearNumero
+  def self.sortear
+    v = []
+    v << SecureRandom.random_number(20)
+    v.sample
+  end
 end
