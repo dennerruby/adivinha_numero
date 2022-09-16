@@ -1,7 +1,7 @@
 require "securerandom"
 
-class SortearNumero
-  def self.sortear
+class DrawNumber
+  def self.draw
     v = []
     v << SecureRandom.random_number(20)
     v.sample

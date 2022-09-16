@@ -1,9 +1,9 @@
-require_relative 'lib/adivinhar_numero'
+require_relative 'lib/guess_number'
 
-jogo = AdivinharNumero.new
+game = GuessNumber.new
 
-until jogo.venceu
-  puts "Digite um numero"
-  numero = gets.to_i
-  puts jogo.tentar_adivinhar(numero)
+until game.win
+  puts "\n Ｅｎｔｅｒ ｏｆ ｎｕｍｂｅｒ （っ＾▿＾）"
+  number = gets.to_i
+  puts game.try_guess(number)
 end

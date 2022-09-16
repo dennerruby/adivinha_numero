@@ -1,23 +1,22 @@
 require "tty-cursor"
 require "tty-spinner"
 
-class Inicializacao
-  def self.inicializando
+class ScreenInitialization
+  def self.initializing
     system("clear")
 
     cursor = TTY::Cursor
-    print cursor.move_to(80, 15)
+    print cursor.move_to(95, 15)
 
-    print "Carrengando o Jogo."
+    print "ｌｏａｄｉｎｇ ｔｈｅ ｇａｍｅ ᕙ(`▿´)ᕗ ."
     4.times do |i|
       sleep 1
       print "."
     end
-    puts
-
+    print
     File.open(File.expand_path("../../ascii/text_intro.txt", __FILE__), "r") do |file|
       while line = file.gets
-        puts line
+        print line
       end
     end
 
